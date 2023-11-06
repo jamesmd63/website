@@ -47,19 +47,22 @@
 
     <script>
         // Array of random forest-themed quotes
-        const forestQuotes = [
+        const quotes = [
             "In every walk with nature one receives far more than he seeks. - John Muir",
             "The forest makes your heart gentle. You become one with it... No place for greed or anger there. - Pha Pachak",
             "The clearest way into the Universe is through a forest wilderness. - John Muir",
             "Look deep into nature, and then you will understand everything better. - Albert Einstein",
-            "Between every two pines is a doorway to a new world. - John Muir"
+            "Between every two pines is a doorway to a new world. - John Muir",
+            “Each day comes bearing its gifts. Untie the ribbon. — Ann Ruth Schabacker",
+            “Great opportunities to help others seldom come, but small ones surround us every day. — Sally Koch",
+            "A problem is a chance for you to do your best. - Duke Ellington"
         ];
 
         // Function to display a random forest quote
         function displayRandomQuote() {
-            const randomIndex = Math.floor(Math.random() * forestQuotes.length);
-            const randomQuote = forestQuotes[randomIndex];
-            document.getElementById('random-text').textContent = `Random Forest Quote: "${randomQuote}"`;
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[randomIndex];
+            document.getElementById('random-text').textContent = `Random Quote: "${randomQuote}"`;
         }
 
         // Display a random quote when the page loads
