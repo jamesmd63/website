@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Forest Adventure</title>
+    <style>
+        body {
+            background-image: url('forest-background.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #random-element {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Forest Adventure</h1>
+        <p>For Fun</p>
+        <p>Embrace the beauty and tranquility of the forest in this virtual journey.</p>
+        
+        <div id="random-element">
+            <p id="random-text">Random Forest Quote: Loading...</p>
+        </div>
+    </div>
+
+    <script>
+        // Array of random forest-themed quotes
+        const forestQuotes = [
+            "In every walk with nature one receives far more than he seeks. - John Muir",
+            "The forest makes your heart gentle. You become one with it... No place for greed or anger there. - Pha Pachak",
+            "The clearest way into the Universe is through a forest wilderness. - John Muir",
+            "Look deep into nature, and then you will understand everything better. - Albert Einstein",
+            "Between every two pines is a doorway to a new world. - John Muir"
+        ];
+
+        // Function to display a random forest quote
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * forestQuotes.length);
+            const randomQuote = forestQuotes[randomIndex];
+            document.getElementById('random-text').textContent = `Random Forest Quote: "${randomQuote}"`;
+        }
+
+        // Display a random quote when the page loads
+        displayRandomQuote();
+    </script>
+</body>
+</html>
